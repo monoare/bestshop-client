@@ -47,8 +47,10 @@ const Login = () => {
                 </button>
               </div>
               <div>
-                <h2>New Customer</h2>
-                <p>
+                <h2 className="text-2xl font-bold mt-5 text-center">
+                  New Customer
+                </h2>
+                <p className="text-justify mt-4">
                   By creating an account with our store, you will be able to
                   move through the checkout process faster, store multiple
                   shipping addresses, view and track your orders in your account
@@ -56,7 +58,7 @@ const Login = () => {
                 </p>
                 <div className="form-control mt-6">
                   <button className="btn bg-black hover:bg-[#48CAB2] text-white font-bold">
-                    Login
+                    Create an Account
                   </button>
                 </div>
               </div>

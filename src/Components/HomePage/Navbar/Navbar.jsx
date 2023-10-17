@@ -1,5 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
 import { FiShoppingCart } from "react-icons/fi";
+import logo from "../../../assets/BestShopLogo.png";
 
 const Navbar = () => {
   const activeLink =
@@ -57,7 +58,8 @@ const Navbar = () => {
               {navLinks}
             </ul>
           </div>
-          <a className="btn btn-ghost normal-case text-xl">Best Shop</a>
+
+          <img className="w-2/3" src={logo} alt="" />
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="flex">{navLinks}</ul>
