@@ -66,7 +66,10 @@ const Navbar = () => {
           <Link to="/cart" className="p-3 mr-4 rounded-lg hover:bg-[#48CAB2]">
             <FiShoppingCart className="text-2xl"></FiShoppingCart>
           </Link>
-          <Link className="lg:text-lg font-bold text-black transition hover:underline hover:text-[#48CAB2]">
+          <Link
+            to="/login"
+            className="lg:text-lg font-bold text-black transition hover:underline hover:text-[#48CAB2]"
+          >
             Login
           </Link>
         </div>
