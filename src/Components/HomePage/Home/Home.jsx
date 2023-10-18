@@ -7,10 +7,19 @@ const Home = () => {
   return (
     <div>
       <Navbar></Navbar>
-      <div className="container mx-auto mb-14">
+      <div className="container mx-auto">
         <Banner></Banner>
       </div>
-      <Brands></Brands>
+
+      <div>
+        <div className="my-20 mx-20 pt-10">
+          <p className="text-center text-5xl font-raleway font-bold mb-8 hover:text-[#48CAB2]">
+            Signature Brands Collection
+          </p>
+          <Brands></Brands>
+        </div>
+      </div>
+
       <div>
         <Footer></Footer>
       </div>

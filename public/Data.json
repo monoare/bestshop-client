@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "image": "https://i.ibb.co/ssF2LQb/HM-Logo-700x394.png",
+    "unique_title": "Where Fashion Meets Fun",
+    "brand": "H&M",
+    "button": "Show Product"
+  },
+  {
+    "id": 2,
+    "image": "https://i.ibb.co/vPYdx4S/Adidas-Logo-700x394.png",
+    "unique_title": "Unleash Your Potential",
+    "brand": "Adidas",
+    "button": "Show Product"
+  },
+  {
+    "id": 3,
+    "image": "https://i.ibb.co/wr45SSw/Levis-Logo-700x394.png",
+    "unique_title": "Classic Style, Timeless Comfort",
+    "brand": "Levis",
+    "button": "Show Product"
+  },
+  {
+    "id": 4,
+    "image": "https://i.ibb.co/7zJ2YdS/Gucci-Logo-700x394.png",
+    "unique_title": "Where Luxury Meets Elegance",
+    "brand": "Gucci",
+    "button": "Show Product"
+  },
+  {
+    "id": 5,
+    "image": "https://i.ibb.co/WGq17fP/Kappa-Logo-700x394.png",
+    "unique_title": "Embrace the Retro Vibe",
+    "brand": "Kappa",
+    "button": "Show Product"
+  },
+  {
+    "id": 6,
+    "image": "https://i.ibb.co/k1yJKGP/Nike-Logo-700x394.png",
+    "unique_title": "Just Do It - In Style",
+    "brand": "Nike",
+    "button": "Show Product"
+  },
+  {
+    "id": 7,
+    "image": "https://i.ibb.co/NyzG4MM/Zara-Logo-700x394.png",
+    "unique_title": "Where Trends Come to Life",
+    "brand": "Zara",
+    "button": "Show Product"
+  },
+  {
+    "id": 8,
+    "image": "https://i.ibb.co/4NpjzPq/Puma-Logo-700x394.png",
+    "unique_title": "Ignite Your Passion for Sport",
+    "brand": "Puma",
+    "button": "Show Product"
+  }
+]
