@@ -16,7 +16,7 @@ const AddProduct = () => {
     console.log(newProduct);
 
     // send data to the server
-    fetch("http://localhost:5000/", {
+    fetch("http://localhost:5000/product", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -34,8 +34,8 @@ const AddProduct = () => {
       <div>
         <Navbar></Navbar>
       </div>
-      <form onSubmit={handleInput} className="mt-4 bg-base-200">
-        <div className="hero bg-base-200">
+      <div className="mt-4 bg-base-200">
+        <form onSubmit={handleInput} className="hero bg-base-200">
           <div className="hero-content flex-col">
             <div className="text-center lg:text-left">
               <h1 className="text-3xl font-bold">Add Details of a Product</h1>
@@ -47,7 +47,7 @@ const AddProduct = () => {
                     {/* Image input field */}
                     <div className="form-control">
                       <label className="label">
-                        <span className="label-text">Product Name</span>
+                        <span className="label-text">Photo URL</span>
                       </label>
                       <input
                         type="text"
@@ -153,8 +153,8 @@ const AddProduct = () => {
               </div>
             </div>
           </div>
-        </div>
-      </form>
+        </form>
+      </div>
     </div>
   );
 };
