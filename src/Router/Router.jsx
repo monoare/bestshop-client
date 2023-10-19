@@ -5,11 +5,13 @@ import AddProduct from "../Components/AddProduct/AddProduct";
 import MyCart from "../Components/MyCart/MyCart";
 import Login from "../Components/Login/Login";
 import Brands from "../Components/BrandNames/Brands";
+import Products from "../Components/Products/Products";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    loader: () => fetch("http://localhost:5000/product"),
     children: [
       {
         path: "/",
@@ -28,8 +30,13 @@ const router = createBrowserRouter([
         element: <Login></Login>,
       },
       {
-        path: "/brands",
+        path: "/brands/:id",
         element: <Brands></Brands>,
+      },
+      {
+        path: "/allProducts",
+        element: <Products></Products>,
+        loader: () => fetch("http://localhost:5000/product"),
       },
     ],
   },

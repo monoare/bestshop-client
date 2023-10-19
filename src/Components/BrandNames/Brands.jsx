@@ -1,9 +1,15 @@
 import { AwesomeButton } from "react-awesome-button";
 import "react-awesome-button/dist/styles.css";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const Brands = () => {
   const [brands, setBrands] = useState([]);
+
+  // Move the handleBrand function outside of useEffect
+  const handleBrand = (brandName) => {
+    console.log(brandName);
+  };
 
   useEffect(() => {
     fetch("Data.json")
@@ -42,14 +48,15 @@ const Brands = () => {
                 <p className="mb-5 text-center text-green-500 text-sm font-bold hover:text-lg">
                   {brand.unique_title}
                 </p>
-                <div className="flex gap-4">
+
+                <Link
+                  to="/allProducts" // Adjust the route to your desired route
+                  onClick={() => handleBrand(brand.brand)} // Pass brand name to the function
+                >
                   <AwesomeButton type="secondary" size="medium">
-                    Details
+                    {brand.button}
                   </AwesomeButton>
-                  <AwesomeButton type="secondary" size="medium">
-                    Update
-                  </AwesomeButton>
-                </div>
+                </Link>
               </div>
             </div>
           </div>
