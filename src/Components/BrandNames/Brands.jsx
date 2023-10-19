@@ -50,8 +50,8 @@ const Brands = () => {
                 </p>
 
                 <Link
-                  to="/allProducts" // Adjust the route to your desired route
-                  onClick={() => handleBrand(brand.brand)} // Pass brand name to the function
+                  to={`/allProducts/${brand.brand}`}
+                  onClick={() => handleBrand(brand.brand)}
                 >
                   <AwesomeButton type="secondary" size="medium">
                     {brand.button}

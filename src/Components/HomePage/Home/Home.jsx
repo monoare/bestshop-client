@@ -2,7 +2,6 @@ import Brands from "../../BrandNames/Brands";
 import Footer from "../../Footer/Footer";
 import Banner from "../Banner/Banner";
 import Navbar from "../Navbar/Navbar";
-import Products from "../../Products/Products";
 
 const Home = () => {
   return (
@@ -17,10 +16,6 @@ const Home = () => {
           Signature Brands Collection
         </p>
         <Brands></Brands>
-      </div>
-
-      <div>
-        <Products></Products>
       </div>
 
       <div>
