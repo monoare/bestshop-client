@@ -65,8 +65,12 @@ const Navbar = () => {
           <ul className="flex">{navLinks}</ul>
         </div>
         <div className="navbar-end">
-          <Link to="/cart" className="p-3 mr-4 rounded-lg hover:bg-[#48CAB2]">
-            <FiShoppingCart className="text-2xl"></FiShoppingCart>
+          <Link
+            to="/cart"
+            className="p-3 mr-4 rounded-lg flex items-center font-bold hover:bg-[#48CAB2]"
+          >
+            <FiShoppingCart className="text-2xl"></FiShoppingCart>{" "}
+            <span className="pl-2">Add to Cart</span>
           </Link>
           <Link
             to="/login"
