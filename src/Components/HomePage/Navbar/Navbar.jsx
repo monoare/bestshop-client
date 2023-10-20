@@ -78,6 +78,12 @@ const Navbar = () => {
           >
             Login
           </Link>
+          <Link
+            to="/register"
+            className="lg:text-lg ml-4 font-bold text-black transition hover:underline hover:text-[#48CAB2]"
+          >
+            Register
+          </Link>
         </div>
       </div>
     </div>
