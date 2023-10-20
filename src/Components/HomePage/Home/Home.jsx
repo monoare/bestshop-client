@@ -18,7 +18,7 @@ const Home = () => {
         <Brands></Brands>
       </div>
 
-      <div>
+      <div className="py-10">
         <Footer></Footer>
       </div>
     </div>

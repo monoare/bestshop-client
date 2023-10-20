@@ -10,7 +10,6 @@ const MyCart = () => {
   console.log(carts);
 
   const handleDelete = (id) => {
-    console.log("delete id", id);
     Swal.fire({
       title: "Are you sure?",
       text: "You won't be able to revert this!",
@@ -26,7 +25,6 @@ const MyCart = () => {
         })
           .then((res) => res.json())
           .then((data) => {
-            console.log("total data", data);
             if (data.deletedCount > 0) {
               Swal.fire("Deleted!", "Your Coffee has been deleted.", "success");
               const remainingCarts = carts.filter((cart) => cart._id !== id);

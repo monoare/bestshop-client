@@ -1,17 +1,31 @@
 import { useLoaderData } from "react-router-dom";
 import Navbar from "../HomePage/Navbar/Navbar";
 import Swal from "sweetalert2";
+import Footer from "../Footer/Footer";
 
 const UpdateProduct = () => {
   const product = useLoaderData();
   console.log(product);
-  const { _id, name, image, brand, type, price, rating, description } = product;
+  const {
+    _id,
+    name,
+    image1,
+    image2,
+    image3,
+    brand,
+    type,
+    price,
+    rating,
+    description,
+  } = product;
 
-  const handleUpdatedProduct = (e) => {
+  const handleUpdateProduct = (e) => {
     e.preventDefault();
     const form = e.target;
     const name = form.name.value;
-    const image = form.image.value;
+    const image1 = form.image1.value;
+    const image2 = form.image2.value;
+    const image3 = form.image3.value;
     const brand = form.brand.value;
     const type = form.type.value;
     const price = form.price.value;
@@ -20,7 +34,9 @@ const UpdateProduct = () => {
 
     const updatedProduct = {
       name,
-      image,
+      image1,
+      image2,
+      image3,
       brand,
       type,
       price,
@@ -57,25 +73,58 @@ const UpdateProduct = () => {
         <Navbar></Navbar>
       </div>
       <div className="mt-4 bg-base-200">
-        <form onSubmit={handleUpdatedProduct} className="hero bg-base-200">
+        <form onSubmit={handleUpdateProduct} className="hero bg-base-200">
           <div className="hero-content flex-col">
-            <div className="text-center lg:text-left">
-              <h1 className="text-3xl font-bold">Add Details of a Product</h1>
+            <div className="text-center py-8 lg:text-left">
+              <h1 className="text-3xl font-bold ">
+                Elevate Your Style with Our Updated Fashion and Apparel
+                Collection
+              </h1>
             </div>
             <div className="card w-full shadow-2xl bg-base-100">
               <div className="card-body">
                 <div className="flex gap-6">
+                  {/* First column */}
                   <div className="w-full">
-                    {/* Image input field */}
+                    {/* Image-1 input field */}
                     <div className="form-control">
                       <label className="label">
-                        <span className="label-text">Photo URL</span>
+                        <span className="label-text">First Photo URL</span>
                       </label>
                       <input
                         type="text"
-                        name="image"
-                        defaultValue={image}
-                        placeholder="Image URL"
+                        name="image1"
+                        defaultValue={image1}
+                        placeholder="First Image URL"
+                        className="input input-bordered"
+                        required
+                      />
+                    </div>
+
+                    {/* Image-2 input field */}
+                    <div className="form-control">
+                      <label className="label">
+                        <span className="label-text">Second Photo URL</span>
+                      </label>
+                      <input
+                        type="text"
+                        name="image2"
+                        defaultValue={image2}
+                        placeholder="Second Image URL"
+                        className="input input-bordered"
+                        required
+                      />
+                    </div>
+                    {/* Image-3 input field */}
+                    <div className="form-control">
+                      <label className="label">
+                        <span className="label-text">Third Photo URL</span>
+                      </label>
+                      <input
+                        type="text"
+                        name="image3"
+                        defaultValue={image3}
+                        placeholder="Third Image URL"
                         className="input input-bordered"
                         required
                       />
@@ -95,7 +144,10 @@ const UpdateProduct = () => {
                         required
                       />
                     </div>
+                  </div>
 
+                  {/* Second column */}
+                  <div className="w-full">
                     {/* Brand input field */}
                     <div className="form-control">
                       <label className="label">
@@ -110,9 +162,7 @@ const UpdateProduct = () => {
                         required
                       />
                     </div>
-                  </div>
 
-                  <div className="w-full">
                     {/* Type input field */}
                     <div className="form-control">
                       <label className="label">
@@ -133,14 +183,18 @@ const UpdateProduct = () => {
                       <label className="label">
                         <span className="label-text">Price</span>
                       </label>
-                      <input
-                        type="number"
-                        name="price"
-                        defaultValue={price}
-                        placeholder="Price"
-                        className="input input-bordered"
-                        required
-                      />
+                      <div className="flex items-center relative w-full">
+                        <span className="absolute ml-4 font-semibold">$</span>
+                        <input
+                          type="number"
+                          name="price"
+                          defaultValue={price}
+                          placeholder="Price"
+                          step="0.01"
+                          className="input input-bordered pl-7 w-full"
+                          required
+                        />
+                      </div>
                     </div>
                     {/* Rating input field */}
                     <div className="form-control">
@@ -150,6 +204,7 @@ const UpdateProduct = () => {
                       <input
                         type="number"
                         name="rating"
+                        step="0.1"
                         defaultValue={rating}
                         placeholder="From 0 to 5"
                         className="input input-bordered"
@@ -185,6 +240,9 @@ const UpdateProduct = () => {
             </div>
           </div>
         </form>
+      </div>
+      <div className="py-10">
+        <Footer></Footer>
       </div>
     </div>
   );
