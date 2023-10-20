@@ -1,9 +1,42 @@
 import { useLoaderData } from "react-router-dom";
 import Navbar from "../HomePage/Navbar/Navbar";
+import { useState } from "react";
+import Swal from "sweetalert2";
 
 const MyCart = () => {
-  const carts = useLoaderData();
+  const loadCarts = useLoaderData();
+  const [carts, setCarts] = useState(loadCarts);
+
   console.log(carts);
+
+  const handleDelete = (id) => {
+    console.log("delete id", id);
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        fetch(`http://localhost:5000/cart/${id}`, {
+          method: "DELETE",
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            console.log("total data", data);
+            if (data.deletedCount > 0) {
+              Swal.fire("Deleted!", "Your Coffee has been deleted.", "success");
+              const remainingCarts = carts.filter((cart) => cart._id !== id);
+              setCarts(remainingCarts);
+              console.log(remainingCarts);
+            }
+          });
+      }
+    });
+  };
 
   return (
     <div>
@@ -45,7 +78,12 @@ const MyCart = () => {
                   <td>{cart.type}</td>
                   <td className="font-bold">${cart.price}</td>
                   <th>
-                    <button className="btn btn-warning btn-xs">Delete</button>
+                    <button
+                      onClick={() => handleDelete(cart._id)}
+                      className="btn btn-warning btn-xs"
+                    >
+                      Delete
+                    </button>
                   </th>
                 </tr>
               </tbody>
