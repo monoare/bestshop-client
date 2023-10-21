@@ -50,4 +50,6 @@ This project serves as a solid foundation for the development of a robust fashio
 
 With the possibility of future enhancements and contributions, this Fashion E-commerce Web Application has the potential to evolve into a versatile and powerful tool within the fashion industry.
 
-client-side live link:
+**client-side live link:**
+
+### https://bestshop-eae65.web.app/
