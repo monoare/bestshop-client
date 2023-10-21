@@ -42,7 +42,8 @@ This repository contains the source code for a Fashion E-commerce web applicatio
 
 ### 10. Alerts and Notifications
 
-- **Description**: The system provides feedback to users through alerts and notifications. For example, when a user successfully adds a product to their cart, a pop-up alert informs them of this action. These notifications enhance the user experience and keep users informed of important interactions.
+- **Description**: The system provides feedback to users through alerts and notifications. For example, when a user succes
+  sfully adds a product to their cart, a pop-up alert informs them of this action. These notifications enhance the user experience and keep users informed of important interactions.
 
 **Project Conclusion:**
 
@@ -50,6 +51,6 @@ This project serves as a solid foundation for the development of a robust fashio
 
 With the possibility of future enhancements and contributions, this Fashion E-commerce Web Application has the potential to evolve into a versatile and powerful tool within the fashion industry.
 
-**client-side live link:**
+**Client-side live link:**
 
 ### https://bestshop-eae65.web.app/

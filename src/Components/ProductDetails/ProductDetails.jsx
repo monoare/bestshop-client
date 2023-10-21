@@ -46,11 +46,11 @@ const ProductDetails = () => {
       <div>
         <Navbar></Navbar>
       </div>
-      <div className="flex flex-col lg:flex-row justify-center gap-4 lg:mt-20 mb-10">
+      <div className="flex flex-col lg:flex-row justify-center lg:mx-20 gap-4 lg:mt-20 mb-10">
         <div className="flex flex-col mx-auto">
           <div>
             <img
-              className="w-[80vw] h-[30vh] md:h-[50vh] lg:h-[80vh] "
+              className="w-[80vw] lg:w-[40vw]  h-[30vh] md:h-[50vh]"
               src={filterDetails.image1}
               alt=""
             />
@@ -58,14 +58,14 @@ const ProductDetails = () => {
           <div className="flex justify-center">
             <div>
               <img
-                className="w-[40vw] h-[30vh] lg:h-[50vh]"
+                className="w-[40vw] lg:w-[20vw] h-[30vh] lg:h-[50vh]"
                 src={filterDetails.image2}
                 alt=""
               />
             </div>
             <div>
               <img
-                className="w-[40vw] h-[30vh] lg:h-[50vh]"
+                className="w-[40vw] lg:w-[20vw] h-[30vh] lg:h-[50vh]"
                 src={filterDetails.image3}
                 alt=""
               />
@@ -80,13 +80,13 @@ const ProductDetails = () => {
             <span>Product Name: </span>
             <span>{filterDetails.name}</span>
           </p>
-          <p className="md:text-4xl font-bold mb-4">
+          <p className="md:text-4xl lg:mt-5 font-bold mb-4">
             <span>Price: </span>
             <span className="md:text-4xl text-[#48CAB2] font-bold">
               ${filterDetails.price}
             </span>
           </p>
-          <p className="mb-4">
+          <p className="mb-4 lg:mt-10">
             <span className="md:text-lg font-bold font-raleway ">
               Brand Name:
             </span>{" "}
@@ -94,7 +94,7 @@ const ProductDetails = () => {
               {filterDetails.brand}
             </span>
           </p>
-          <p className="mb-4">
+          <p className="mb-4 lg:mt-10">
             <span className="md:text-lg font-medium">
               Product Description:{" "}
             </span>
@@ -102,10 +102,10 @@ const ProductDetails = () => {
               {filterDetails.description}
             </span>
           </p>
-          <p className="md:text-lg font-semibold mb-4">
+          <p className="md:text-lg lg:mt-8 font-semibold mb-4">
             Product Type: {filterDetails.type}
           </p>
-          <div className="md:text-lg font-semibold mb-4 flex items-center">
+          <div className="md:text-lg font-semibold mb-4 lg:mt-10 flex items-center">
             <span> Rating: </span>
             <Rating style={{ maxWidth: 250 }} readOnly={filterDetails.rating} />
           </div>
@@ -135,7 +135,7 @@ const ProductDetails = () => {
               </p>
             </div>
           </div>
-          <div className="mt-4">
+          <div className="mt-4 lg:mt-16">
             <form onSubmit={handleCart}>
               <AwesomeButton className="w-full" type="secondary" size="full">
                 Add to Cart
