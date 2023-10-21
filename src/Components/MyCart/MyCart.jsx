@@ -38,15 +38,15 @@ const MyCart = () => {
 
   return (
     <div>
-      <div>
+      <div className="mb-10 md:mt-10">
         <Navbar></Navbar>
       </div>
-      <div className="overflow-x-auto mx-20">
+      <div className="overflow-x-auto md:mx-20">
         <div className="overflow-x-auto">
           <table className="table">
             {/* head */}
             <thead>
-              <tr className="text-black text-base">
+              <tr className="text-black text-xs md:text-lg">
                 <th>Serial</th>
                 <th>Image</th>
                 <th>Brand</th>
@@ -71,10 +71,14 @@ const MyCart = () => {
                       </div>
                     </div>
                   </td>
-                  <td className="font-medium">{cart.brand}</td>
-                  <td className="capitalize">{cart.name}</td>
+                  <td className="font-medium text-xs md:text-lg">
+                    {cart.brand}
+                  </td>
+                  <td className="capitalize text-xs md:text-lg">{cart.name}</td>
                   <td>{cart.type}</td>
-                  <td className="font-bold">${cart.price}</td>
+                  <td className="font-bold text-xs md:text-lg">
+                    ${cart.price}
+                  </td>
                   <th>
                     <button
                       onClick={() => handleDelete(cart._id)}

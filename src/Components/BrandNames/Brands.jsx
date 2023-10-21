@@ -25,7 +25,7 @@ const Brands = () => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
       {brands.map((brand) => (
-        <div key={brand.id} className="brand-container">
+        <div key={brand.id}>
           <div
             className="hero shadow-lg bg-slate-200 border"
             style={{
@@ -37,7 +37,7 @@ const Brands = () => {
             <div className="hero-content h-1/2 text-center">
               <div className="max-w-md">
                 <h1
-                  className={`mb-5 text-5xl text-blue-500 font-bold  ${
+                  className={`mb-5 text-2xl md:text-5xl text-blue-500 font-bold  ${
                     brand.id % 2 === 1
                       ? "hover:underline hover:rotate-6 hover:text-violet-800"
                       : "hover:underline hover:-rotate-6 hover:text-green-600"

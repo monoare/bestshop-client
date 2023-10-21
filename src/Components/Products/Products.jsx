@@ -37,15 +37,15 @@ const Products = () => {
 
   return (
     <div>
-      <div>
+      <div className="md:mt-5 md:mb-5">
         <Navbar></Navbar>
       </div>
       <div className="">
         {filterBrand ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 ">
+          <div className="grid grid-cols-1 md:grid-cols-2 mt-5 md:gap-6">
             {filterBrand.map((product) => (
               <div key={product._id}>
-                <div className="shadow-lg rounded-lg bg-gray-100 w-2/3 text-center mx-auto mb-10">
+                <div className="shadow-lg rounded-lg bg-gray-100 md:w-2/3 text-center mx-auto mb-10">
                   <Swiper
                     cssMode={true}
                     navigation={true}
@@ -65,7 +65,7 @@ const Products = () => {
                       <img className="p-6" src={product.image3} alt="" />
                     </SwiperSlide>
                   </Swiper>
-                  <div className="text-left pl-10 pt-5">
+                  <div className="text-center lg:text-left md:pl-10 md:pt-5">
                     <p className="font-medium mb-2">
                       Name:
                       <span className="text-blue-700 uppercase">
@@ -98,7 +98,7 @@ const Products = () => {
                       </span>
                     </p>
 
-                    <div className="flex justify-between pb-5 pr-10">
+                    <div className="flex flex-col lg:flex-row gap-4 justify-center lg:justify-between pb-5 lg:pr-10">
                       <Link
                         onClick={() => handleDetails(product._id)}
                         to={`/details/${product._id}`}

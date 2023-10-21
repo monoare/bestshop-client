@@ -18,7 +18,7 @@ const Blog = () => {
   return (
     <div>
       <div className="text-center my-5">
-        <h1 className="text-5xl text-[#48CAB2] font-bold font-raleway">
+        <h1 className="text-2xl md:text-5xl text-[#48CAB2] font-bold font-raleway">
           Fashion and Style Blog
         </h1>
       </div>
@@ -31,10 +31,10 @@ const Blog = () => {
               <div>
                 <img src={blog.image1} alt="" />
               </div>
-              <h1 className="text-4xl my-5  font-bold font-raleway">
+              <h1 className="text-xl md:text-4xl my-5  font-bold font-raleway">
                 {blog.title}
               </h1>
-              <p className="text-lg mb-5">
+              <p className="md:text-lg mb-5">
                 {blog.short_description}{" "}
                 <Link
                   onClick={() => handleReadMore(blog.id)}
@@ -44,17 +44,17 @@ const Blog = () => {
                   Read More...
                 </Link>
               </p>
-              <div className="mb-10 flex justify-between">
+              <div className="mb-10 flex flex-col md:flex-row justify-between">
                 <p className="text-sm">
                   by <span className="font-bold">{blog.author}</span>{" "}
                   <span className="">{blog.date}</span>
                   <span className="font-bold"> in Cool, Vintage</span>
                 </p>
-                <p className="flex ">
+                <p className="flex pt-4">
                   <span>
                     <LiaCommentAltSolid className="text-3xl" />
                   </span>
-                  <span className="pl-2 text-sm">25 COMMENT(S)</span>
+                  <span className="pl-2 text-xs md:text-sm">25 COMMENT(S)</span>
                 </p>
               </div>
             </div>

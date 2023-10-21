@@ -12,16 +12,16 @@ const Banner = () => {
         play={false}
         cancelOnInteraction={false} // should stop playing on user interaction
         interval={6000}
-        className="text-white h-[80vh]"
+        className="text-white"
       >
         {/* Slider-1 */}
         <div className="text-black w-full relative" data-src={slider1}>
           <div className="hero-overlay bg-opacity-60"></div>
-          <div className="ml-32">
+          <div className="ml-5 md:ml-32">
             <p className="text-black text-lg font-bold mb-4 uppercase">
               New Collection
             </p>
-            <h1 className="text-black font-bold text-6xl mb-4 w-2/5">
+            <h1 className="text-black font-bold md:text-6xl mb-4 w-2/5">
               Find Your New Favorite Clothing
             </h1>
             <p className="text-lg font-bold text-[#777777]">
@@ -37,10 +37,10 @@ const Banner = () => {
             <p className="text-white text-lg font-bold mb-4 uppercase">
               Need-It-Now
             </p>
-            <h1 className="text-white font-bold text-6xl mb-4">
+            <h1 className="text-white font-bold md:text-6xl mb-4">
               Must-HavesFor The Seasons
             </h1>
-            <p className="text-lg font-bold text-white">
+            <p className="md:text-lg font-bold text-white">
               Contemporary, minimal and beautifully iconic
             </p>
           </div>
@@ -49,11 +49,11 @@ const Banner = () => {
         {/* Slider-3 */}
         <div className="w-full relative" data-src={slider3}>
           <div className="hero-overlay bg-opacity-60"></div>
-          <div className="absolute -top-24 right-0">
+          <div className="ml-5 md:ml-0 md:absolute md:-top-24 md:right-0">
             <p className="text-white text-lg font-bold mb-4 uppercase">
               Don&apos;t miss Today&apos;s Feature Deals
             </p>
-            <h1 className="text-white font-bold text-6xl mb-4 w-2/3">
+            <h1 className="text-white font-bold md:text-6xl mb-4 w-2/3">
               Get Up to 50% off
             </h1>
             <p className="text-lg font-bold text-white">

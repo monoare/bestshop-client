@@ -22,12 +22,12 @@ const Home = () => {
     <div
       className={`text-${textColorClass} min-h-screen transition-colors duration-500 ${backgroundColorClass}`}
     >
-      <div className="p-8">
-        <label className="flex justify-end items-center space-x-2 cursor-pointer">
-          <span>Toggle Dark Mode</span>
+      <div className="">
+        <label className="flex justify-end pt-2 pr-2 items-center cursor-pointer">
+          <span className="text-xs md:text-sm pr-2">Toggle Dark Mode</span>
           <input
             type="checkbox"
-            className="toggle"
+            className="toggle toggle-xs md:toggle-sm"
             checked={isDarkMode}
             onChange={toggleColor}
           />
@@ -38,18 +38,24 @@ const Home = () => {
             <Banner></Banner>
           </div>
 
-          <div className={`my-20 mx-20 pt-10 ${titleTextColorClass}`}>
+          <div
+            className={`my-5 md:my-20 mx-2 md:mx-20 pt-10 ${titleTextColorClass}`}
+          >
             <p
-              className={`text-center text-5xl font-raleway font-bold mb-8 hover:text-[#48CAB2]`}
+              className={`text-center text-xl md:text-5xl font-raleway font-bold mb-8 hover:text-[#48CAB2]`}
             >
               Signature Brands Collection
             </p>
             <Brands></Brands>
           </div>
 
+          <div className="border-b-2"></div>
+
           <div className={`mb-20 ${textColorClass}`}>
             <Collections></Collections>
           </div>
+
+          <div className="border-b-2 mb-10"></div>
 
           <div>
             <Blog></Blog>

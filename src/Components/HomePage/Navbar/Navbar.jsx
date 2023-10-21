@@ -99,7 +99,7 @@ const Navbar = () => {
     </>
   );
   return (
-    <div className="md:my-7">
+    <div className="md:mb-7">
       <div className="navbar">
         <div className="navbar-start">
           <div className="dropdown">
