@@ -52,16 +52,16 @@ const Register = () => {
 
   return (
     <div>
-      <div>
+      <div className="md:my-10">
         <Navbar></Navbar>
       </div>
       <div className="hero min-h-screen bg-base-200 font-raleway mb-10">
         <form onSubmit={handleRegister} className="hero-content flex-col">
           <div className="text-center">
-            <h1 className="text-4xl font-bold mb-4">
+            <h1 className="text-2xl md:text-4xl pt-5 font-bold mb-4">
               Don&apos;t have an Account?
             </h1>
-            <p className="py-6 text-3xl font-bold">Register now!</p>
+            <p className="py-6 text-xl md:text-3xl font-bold">Register now!</p>
           </div>
 
           <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
@@ -114,10 +114,10 @@ const Register = () => {
                 </button>
               </div>
               <div>
-                <h2 className="text-2xl font-bold mt-5 text-center hover:text-[#48CAB2]">
+                <h2 className="md:text-2xl font-bold mt-5 text-center hover:text-[#48CAB2]">
                   Already a Valued Customer
                 </h2>
-                <p className="text-justify mt-4">
+                <p className="text-justify text-sm md:text-lg mt-4">
                   As an existing member of our community, we greatly appreciate
                   your continued trust and support. Your account with us offers
                   a host of benefits, making your shopping experience more

@@ -63,11 +63,13 @@ const AddProduct = () => {
         <form onSubmit={handleInput} className="hero bg-base-200">
           <div className="hero-content flex-col">
             <div className="text-center lg:text-left">
-              <h1 className="text-3xl font-bold">Add Details of a Product</h1>
+              <h1 className="text-xl md:text-3xl py-5 font-bold">
+                Add Details of a Product
+              </h1>
             </div>
             <div className="card w-full shadow-2xl bg-base-100">
               <div className="card-body">
-                <div className="flex gap-6">
+                <div className="flex flex-col md:flex-row gap-6">
                   <div className="w-full">
                     {/* Image-1 input field */}
                     <div className="form-control">

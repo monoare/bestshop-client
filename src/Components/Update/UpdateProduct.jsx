@@ -76,14 +76,14 @@ const UpdateProduct = () => {
         <form onSubmit={handleUpdateProduct} className="hero bg-base-200">
           <div className="hero-content flex-col">
             <div className="text-center py-8 lg:text-left">
-              <h1 className="text-3xl font-bold ">
+              <h1 className="text-xl md:text-3xl font-bold ">
                 Elevate Your Style with Our Updated Fashion and Apparel
                 Collection
               </h1>
             </div>
             <div className="card w-full shadow-2xl bg-base-100">
               <div className="card-body">
-                <div className="flex gap-6">
+                <div className="flex flex-col md:flex-row md:gap-6">
                   {/* First column */}
                   <div className="w-full">
                     {/* Image-1 input field */}
@@ -224,6 +224,7 @@ const UpdateProduct = () => {
                   <textarea
                     type="text"
                     name="description"
+                    style={{ height: "100px" }}
                     defaultValue={description}
                     placeholder="Short description"
                     className="input input-bordered"
@@ -241,7 +242,7 @@ const UpdateProduct = () => {
           </div>
         </form>
       </div>
-      <div className="py-10">
+      <div>
         <Footer></Footer>
       </div>
     </div>

@@ -13,7 +13,7 @@ const ErrorPage = () => {
         }
         alt=""
       />
-      <div className="relative bottom-32">
+      <div className="lg:relative bottom-32">
         <p className="text-2xl text-green-600 mb-4">
           It looks like you're lost in space.
         </p>

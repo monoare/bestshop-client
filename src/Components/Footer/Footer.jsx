@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <div className="bg-yellow-100 w-full mx-auto pt-10 pb-8 md:pb-20">
-      <div className="flex flex-col md:flex-row justify-center gap-8 md:gap-14 text-black ">
+      <div className="flex flex-col md:flex-row justify-center gap-8 md:gap-14 text-black mx-4">
         <div className="space-y-2 mx-auto text-center md:text-left">
           <h2 className="text-lg  font-bold pb-2">Info</h2>
           <p>About Us</p>
