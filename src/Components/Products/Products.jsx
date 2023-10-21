@@ -37,7 +37,7 @@ const Products = () => {
       </div>
       <div>
         {filterBrand.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 mt-5 md:gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 mt-5 md:gap-6 lg:mx-40">
             {filterBrand.map((product) => (
               <div key={product._id}>
                 <div className="shadow-lg rounded-lg bg-gray-100 md:w-2/3 lg:w-80 text-center mx-auto mb-10">

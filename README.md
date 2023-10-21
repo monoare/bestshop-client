@@ -1,10 +1,6 @@
-<!-- Include a project logo or image here if you have one -->
-
-# Fashion E-commerce Web Application
-
 ## Overview
 
-This repository contains the source code for a Fashion E-commerce web application. The application offers a feature-rich shopping experience and several customization options. Here's a detailed overview of its key features:
+This repository contains the source code for a Fashion E-commerce web application named Best Shop. The application offers a feature-rich shopping experience and several customization options. Here's a detailed overview of its key features:
 
 ## Features
 
