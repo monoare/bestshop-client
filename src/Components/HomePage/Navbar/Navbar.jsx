@@ -169,11 +169,13 @@ const Navbar = () => {
                 <div className="pb-2">
                   <img
                     className="rounded-full w-10"
-                    src={user.photoURL}
+                    src={user?.photoURL}
                     alt=""
                   />
                 </div>
-                <div className="text-center border-t-2">{user.displayName}</div>
+                <div className="text-center text-sm md:text-lg border-t-2">
+                  {user?.displayName}
+                </div>
               </div>
             )}
           </div>

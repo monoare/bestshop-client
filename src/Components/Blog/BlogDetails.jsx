@@ -20,7 +20,7 @@ const BlogDetails = () => {
     <div>
       <Navbar></Navbar>
       <div className="flex justify-center">
-        <div className="w-[90vw] md:w-[70vw] mb-20">
+        <div className="w-[90vw] lg:w-[70vw] mb-20">
           <h1 className="text-xl md:text-4xl my-5 text-center font-bold font-raleway">
             {selectedBlog.title}
           </h1>
@@ -32,7 +32,7 @@ const BlogDetails = () => {
           <div>
             <img src={selectedBlog.image1} alt="" />
           </div>
-          <div className="md:w-[50vw] mx-auto">
+          <div className="lg:w-[50vw] mx-auto">
             <div className="md:text-2xl font-bold font-raleway mt-10">
               <span>1. </span>
               <span>{selectedBlog.descriptions[0].title}</span>
@@ -55,27 +55,27 @@ const BlogDetails = () => {
 
           <div className="grid grid-cols-2 gap-0 mt-10">
             <img
-              className="md:w-[40vw] md:h-[50vh]"
+              className="lg:w-[40vw] lg:h-[50vh]"
               src={selectedBlog.image2}
               alt=""
             />
             <img
-              className="md:w-[40vw] md:h-[50vh]"
+              className="lg:w-[40vw] lg:h-[50vh]"
               src={selectedBlog.image3}
               alt=""
             />
             <img
-              className="md:w-[40vw] md:h-[50vh]"
+              className="lg:w-[40vw] lg:h-[50vh]"
               src={selectedBlog.image4}
               alt=""
             />
             <img
-              className="md:w-[40vw] md:h-[50vh]"
+              className="lg:w-[40vw] lg:h-[50vh]"
               src={selectedBlog.image5}
               alt=""
             />
           </div>
-          <div className="md:w-[50vw] mx-auto">
+          <div className="lg:w-[50vw] mx-auto">
             <p className="md:text-lg md:leading-8 text-[#777777] mt-5">
               {" "}
               {selectedBlog.long_quote}

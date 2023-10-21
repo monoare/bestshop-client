@@ -11,25 +11,17 @@ import "swiper/css/pagination";
 // import required modules
 import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper/modules";
 import { AwesomeButton } from "react-awesome-button";
+import Footer from "../Footer/Footer";
 
 const Products = () => {
   const products = useLoaderData();
-  console.log(products);
   const { brandName } = useParams();
-  // Access the brand name from the route
-
-  // Now you can use the brandName in your Products component
-  console.log("Brand Name from route:", brandName);
-
-  console.log("brandName:", brandName);
-  console.log("products.brand:", products.brand);
 
   const filterBrand = products.filter((product) =>
     new RegExp(brandName.replace(/[.'*+?^${}()|[\]\\]/g, "\\$&"), "").test(
       product.brand
     )
   );
-  console.log("data matched", filterBrand);
 
   const handleDetails = (_Id) => {
     console.log(_Id);
@@ -41,11 +33,11 @@ const Products = () => {
         <Navbar></Navbar>
       </div>
       <div className="">
-        {filterBrand ? (
+        {filterBrand > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 mt-5 md:gap-6">
             {filterBrand.map((product) => (
               <div key={product._id}>
-                <div className="shadow-lg rounded-lg bg-gray-100 md:w-2/3 text-center mx-auto mb-10">
+                <div className="shadow-lg rounded-lg bg-gray-100 md:w-2/3 lg:w-80 text-center mx-auto mb-10">
                   <Swiper
                     cssMode={true}
                     navigation={true}
@@ -53,16 +45,28 @@ const Products = () => {
                     mousewheel={true}
                     keyboard={true}
                     modules={[Navigation, Pagination, Mousewheel, Keyboard]}
-                    className="mySwiper"
+                    className="mySwiper h-[50vh] "
                   >
                     <SwiperSlide>
-                      <img className="p-6" src={product.image1} alt="" />
+                      <img
+                        className="p-6 w-full h-[50vh]"
+                        src={product.image1}
+                        alt=""
+                      />
                     </SwiperSlide>
                     <SwiperSlide>
-                      <img className="p-6" src={product.image2} alt="" />
+                      <img
+                        className="p-6 w-full h-[50vh]"
+                        src={product.image2}
+                        alt=""
+                      />
                     </SwiperSlide>
                     <SwiperSlide>
-                      <img className="p-6" src={product.image3} alt="" />
+                      <img
+                        className="p-6 w-full h-[60vh]"
+                        src={product.image3}
+                        alt=""
+                      />
                     </SwiperSlide>
                   </Swiper>
                   <div className="text-center lg:text-left md:pl-10 md:pt-5">
@@ -103,12 +107,12 @@ const Products = () => {
                         onClick={() => handleDetails(product._id)}
                         to={`/details/${product._id}`}
                       >
-                        <AwesomeButton type="secondary" size="medium">
+                        <AwesomeButton type="secondary" size="small">
                           Details
                         </AwesomeButton>
                       </Link>
                       <Link to={`/update/${product._id}`}>
-                        <AwesomeButton type="secondary" size="medium">
+                        <AwesomeButton type="secondary" size="small">
                           Update
                         </AwesomeButton>
                       </Link>
@@ -120,11 +124,11 @@ const Products = () => {
           </div>
         ) : (
           <div>
-            <p>Products are out of stock</p>
             <img src={stock} alt="" />
           </div>
         )}
       </div>
+      <Footer></Footer>
     </div>
   );
 };
