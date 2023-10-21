@@ -9,8 +9,8 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <div>
-      <div className="flex flex-col md:flex-row justify-center gap-14">
+    <div className="bg-yellow-100 pt-10 pb-20">
+      <div className="flex flex-col md:flex-row justify-center gap-14 text-black ">
         <div className="space-y-2">
           <h2 className="text-lg font-bold pb-2">Info</h2>
           <p>About Us</p>
@@ -83,7 +83,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="ml-52 mt-10">
+      <div className="lg:ml-52 lg:mt-10">
         <small>
           &copy; 2023 Best Shop website. All Rights Reserved by Monoare.
         </small>

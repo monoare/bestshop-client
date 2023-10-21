@@ -27,7 +27,7 @@ const Brands = () => {
       {brands.map((brand) => (
         <div key={brand.id} className="brand-container">
           <div
-            className="hero shadow-lg border"
+            className="hero shadow-lg bg-slate-200 border"
             style={{
               backgroundImage: `url(${brand.image})`,
               backgroundSize: "100%",

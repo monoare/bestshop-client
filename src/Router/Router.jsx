@@ -10,12 +10,17 @@ import ProductDetails from "../Components/ProductDetails/ProductDetails";
 import UpdateProduct from "../Components/Update/UpdateProduct";
 import Register from "../Components/Register/Register";
 import PrivateRoute from "../Layout/PrivateRoute";
+import ErrorPage from "../Components/ErrorPage/ErrorPage";
+import Blog from "../Components/Blog/Blog";
+import BlogDetails from "../Components/Blog/BlogDetails";
+import BlogPage from "../Components/Blog/BlogPage";
+import Collections from "../Components/Collections/Collections";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
-
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",
@@ -69,6 +74,23 @@ const router = createBrowserRouter([
         ),
         loader: ({ params }) =>
           fetch(`http://localhost:5000/product/${params.id}`),
+      },
+      {
+        path: "/blog",
+        element: <Blog></Blog>,
+      },
+      {
+        path: "/blogDetails/:id",
+        element: <BlogDetails></BlogDetails>,
+        loader: () => fetch("/blog.json"),
+      },
+      {
+        path: "/blogPage",
+        element: <BlogPage></BlogPage>,
+      },
+      {
+        path: "/collections",
+        element: <Collections></Collections>,
       },
     ],
   },
