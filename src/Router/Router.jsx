@@ -41,7 +41,10 @@ const router = createBrowserRouter([
             <MyCart></MyCart>
           </PrivateRoute>
         ),
-        loader: () => fetch("http://localhost:5000/cart"),
+        loader: () =>
+          fetch(
+            "https://best-shop-server-1ilrmtj1v-monoare-hossains-projects.vercel.app/cart"
+          ),
       },
       {
         path: "/login",
@@ -58,7 +61,10 @@ const router = createBrowserRouter([
       {
         path: "/allProducts/:brandName",
         element: <Products></Products>,
-        loader: () => fetch("http://localhost:5000/product"),
+        loader: () =>
+          fetch(
+            "https://best-shop-server-1ilrmtj1v-monoare-hossains-projects.vercel.app/product"
+          ),
       },
       {
         path: "/details/:id",
@@ -67,7 +73,10 @@ const router = createBrowserRouter([
             <ProductDetails></ProductDetails>
           </PrivateRoute>
         ),
-        loader: () => fetch("http://localhost:5000/product"),
+        loader: () =>
+          fetch(
+            "https://best-shop-server-1ilrmtj1v-monoare-hossains-projects.vercel.app/product"
+          ),
       },
       {
         path: "/update/:id",
@@ -77,7 +86,9 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/product/${params.id}`),
+          fetch(
+            `https://best-shop-server-1ilrmtj1v-monoare-hossains-projects.vercel.app/product/${params.id}`
+          ),
       },
       {
         path: "/blog",

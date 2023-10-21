@@ -17,13 +17,16 @@ const ProductDetails = () => {
 
   const handleCart = (e) => {
     e.preventDefault();
-    fetch("http://localhost:5000/cart/", {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(filterDetailsToSend),
-    })
+    fetch(
+      "https://best-shop-server-1ilrmtj1v-monoare-hossains-projects.vercel.app/cart/",
+      {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(filterDetailsToSend),
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         if (data.insertedId) {

@@ -46,13 +46,16 @@ const UpdateProduct = () => {
     console.log(updatedProduct);
 
     // send data to the server
-    fetch(`http://localhost:5000/product/${_id}`, {
-      method: "PUT",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(updatedProduct),
-    })
+    fetch(
+      `https://best-shop-server-1ilrmtj1v-monoare-hossains-projects.vercel.app/product/${_id}`,
+      {
+        method: "PUT",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(updatedProduct),
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         console.log(data);

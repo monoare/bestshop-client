@@ -16,12 +16,15 @@ import Footer from "../Footer/Footer";
 const Products = () => {
   const products = useLoaderData();
   const { brandName } = useParams();
+  console.log(products);
 
   const filterBrand = products.filter((product) =>
     new RegExp(brandName.replace(/[.'*+?^${}()|[\]\\]/g, "\\$&"), "").test(
       product.brand
     )
   );
+
+  console.log(filterBrand);
 
   const handleDetails = (_Id) => {
     console.log(_Id);
@@ -32,8 +35,8 @@ const Products = () => {
       <div className="md:mt-5 md:mb-5">
         <Navbar></Navbar>
       </div>
-      <div className="">
-        {filterBrand > 0 ? (
+      <div>
+        {filterBrand.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 mt-5 md:gap-6">
             {filterBrand.map((product) => (
               <div key={product._id}>
